@@ -48,9 +48,9 @@ public class URLify {
 
     public static void main(String[] args) {
         String initialResult = getInput();
-        System.out.println(initialResult);
+        System.out.println("Initial result: " + initialResult);
         String updatedResult = replaceSpaces(initialResult);
-        System.out.println(updatedResult);
+        System.out.println("Updated result: " + updatedResult);
 
     }
 }
