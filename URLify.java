@@ -34,7 +34,7 @@ public class URLify {
         StringBuilder mutableString = new StringBuilder();
 
         for (int i = 0; i < array.length; i++){
-            if (array[i] == " "){
+            if (array[i] == ' '){
                 mutableString.append("%20");
             } else {
                 mutableString.append(array[i]);
@@ -48,9 +48,9 @@ public class URLify {
 
     public static void main(String[] args) {
         String initialResult = getInput();
-        //System.out.println("Initial string: ", initialResult);
+        System.out.println(initialResult);
         String updatedResult = replaceSpaces(initialResult);
-        //System.out.println("Updated result: ", updatedResult);
+        System.out.println(updatedResult);
 
     }
 }
