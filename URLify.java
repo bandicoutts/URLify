@@ -16,6 +16,7 @@ Input: "Mr John Smith " J 13 Output: "Mr%20J ohn%20Smith" Hints: #53, #7 78
 
 
 import java.util.Scanner;
+import java.lang.StringBuilder;
 
 
 public class URLify {
@@ -27,8 +28,29 @@ public class URLify {
         return result;
     }
 
+
+    public static String replaceSpaces(String string){
+        char array[] = string.toCharArray();
+        StringBuilder mutableString = new StringBuilder();
+
+        for (i = 0; i < array.length; i++){
+            if (array[i] == " "){
+                mutableString.append("%20");
+            } else {
+                mutableString.append(array[i]);
+            }
+        }
+
+        String result = mutableString.toString();
+        return result;
+
+    }
+
     public static void main(String[] args) {
-        System.out.println(getInput());
+        String initialResult = getInput();
+        //System.out.println("Initial string: ", initialResult);
+        String updatedResult = replaceSpaces(initialResult);
+        //System.out.println("Updated result: ", updatedResult);
 
     }
 }
