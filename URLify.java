@@ -27,8 +27,7 @@ public class URLify {
         result = reader.nextLine();
         return result;
     }
-
-/*
+    
     public static String replaceSpaces(String string){
         char array[] = string.toCharArray();
         StringBuilder mutableString = new StringBuilder();
@@ -44,12 +43,12 @@ public class URLify {
         String result = mutableString.toString();
         return result;
 
-    }*/
+    }
 
-    public static String replaceSpaces(String string){
+/*    public static String replaceSpaces(String string){
         String result = string.replaceAll("\\s", "%20");
         return result;
-    }
+    }*/
 
     public static void main(String[] args) {
         String initialResult = getInput();
