@@ -12,9 +12,6 @@ Input: "Mr John Smith " J 13 Output: "Mr%20J ohn%20Smith" Hints: #53, #7 78
 This is the easiest "MVP" solution I could come up with in Python - it creates a new string in replaceSpaces to return, 
 but I'd like to find a way of doing this in place if possible. 
 
-'''
-
-
 def replaceSpaces(string):
 	result = ""
 	for i in string:
@@ -23,6 +20,12 @@ def replaceSpaces(string):
 		else:
 			result += i
 	return result
+'''
+
+
+def replaceSpaces(string):
+	string = string.replace(" ", "%20")
+	return string
 
 def main():
 	initialResult = " Testing testing tested "
@@ -31,3 +34,4 @@ def main():
 	print("Updated result: " + updatedResult)
 
 main()
+
