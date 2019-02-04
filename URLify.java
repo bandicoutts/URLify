@@ -33,7 +33,7 @@ public class URLify {
         char array[] = string.toCharArray();
         StringBuilder mutableString = new StringBuilder();
 
-        for (i = 0; i < array.length; i++){
+        for (int i = 0; i < array.length; i++){
             if (array[i] == " "){
                 mutableString.append("%20");
             } else {
